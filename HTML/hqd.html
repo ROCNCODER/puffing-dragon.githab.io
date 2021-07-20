@@ -39,7 +39,7 @@
             <img src="../img\1.png" alt="" class="">
             <div class="pop">HQD CUVIE PLUS, Манго-гуава  Одноразовая электронная сигарета HQD Super, в индивидуальной упаковке, включение происходит при затяжке. После употребления необходимо сдавать в пункт приема батареек.</div>
             </div>
-        <a href="corzina.html"><button class="pocupca id" data-id="qd1">Добавить в корзину</button></a>
+        <a href="corzina.html" onclick="Prov()"><button class="pocupca id" data-id="qd1">Добавить в корзину</button></a>
         <div class="img-siga">
             <img src="../img\2.png" alt="" class="">
             <div class="pop">HQD CUVIE PLUS, Черника-малина  Одноразовая электронная сигарета HQD Super, в индивидуальной упаковке, включение происходит при затяжке. После употребления необходимо сдавать в пункт приема батареек.</div>
@@ -75,6 +75,27 @@
     }
   ]
 });
+		
+		
 </script>
+function Prov()	{
+	
+	
+	gtag('event', 'select_content', {
+  "content_type": "product",
+  "items": [
+    {
+      "id": "P12345",
+      "name": "Android Warhol T-Shirt",
+      "list_name": "Search Results",
+      "brand": "Google",
+      "category": "Apparel/T-Shirts",
+      "variant": "Black",
+      "list_position": 1,
+      "quantity": 2,
+      "price": 2
+    }
+  ]
+});}
 </body>
 </html>
