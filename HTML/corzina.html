@@ -36,7 +36,7 @@
 </div>
     <div class="corz">
            <div class="info-top">Ваш товар</div>
-          <a href="spasipo.html"> <button class="cnopca " >Купить</button> </a>
+          <a href="spasipo.html" onclick="pri ()"> <button class="cnopca " >Купить</button> </a>
         </div>
         
 
@@ -45,6 +45,7 @@
 <script src="../JS\new-fail.JS">
 	
 <script>
+	function pri (){
     gtag('event', 'begin_checkout', {
   "items": [
     {
@@ -69,6 +70,7 @@
       "quantity": 3,
       "price": 743
     }
+	  }
   ],
 
 });
