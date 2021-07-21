@@ -36,7 +36,7 @@
 </div>
     <div class="corz">
            <div class="info-top">Ваш товар</div>
-          <a href="spasipo.html" onclick="showMessage()"> <button class="cnopca " >Купить</button> </a>
+          <a href="spasipo.html" onclick="showMessage()"> <button class="cnopca " onclick="showMessage()" >Купить</button> </a>
         </div>
         
 
@@ -73,7 +73,7 @@ gtag('event', 'begin_checkout', {
   ],
   "coupon": ""
 });
-  <script>
+
 		function showMessage(){
 gtag('event', 'checkout_progress', {
   "items": [
@@ -93,8 +93,7 @@ gtag('event', 'checkout_progress', {
 
 });
 
-</script>
-	<script>
+
 	function createFunctionWithTimeout(callback, opt_timeout) {
   var called = false;
   function fn() {
