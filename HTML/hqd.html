@@ -39,7 +39,7 @@
             <img src="../img\1.png" alt="" class="">
             <div class="pop">HQD CUVIE PLUS, Манго-гуава  Одноразовая электронная сигарета HQD Super, в индивидуальной упаковке, включение происходит при затяжке. После употребления необходимо сдавать в пункт приема батареек.</div>
             </div>
-    <a href="corzina.html" onclick="Prov(); return !ga.loaded;" ><button class="pocupca id" data-id="qd1">Добавить в корзину</button></a>
+    <a href="corzina.html" id="cart"   class="pocupca id";" >Добавить в корзину</a>
         <div class="img-siga">
             <img src="../img\2.png" alt="" class="">
             <div class="pop">HQD CUVIE PLUS, Черника-малина  Одноразовая электронная сигарета HQD Super, в индивидуальной упаковке, включение происходит при затяжке. После употребления необходимо сдавать в пункт приема батареек.</div>
@@ -97,6 +97,40 @@ gtag('event', 'add_to_cart', {
 });
 	
 	</script>
+	<script>
+	
+	window.onload = function () {
+
+    //получаем идентификатор элемента
+    var a = document.getElementById('cart');
+    
+    //вешаем на него событие
+    a.onclick = function() {
+        //производим какие-то действия
+	    gtag('event', 'add_to_cart', {
+  "items": [
+    {
+       "id": "S111",
+      "name": "HQD Cuvie Plus",
+      "brand": "HQD",
+      "category": "Electronic Vaporizer",
+      "variant": "Black",
+      "list_position": 1,
+      "quantity": 3,
+      "price": 383
+	    
+	   
+
+     }
+    
+  ],
+});
+	
+        //предотвращаем переход по ссылке href
+        return false;
+	  
+	
+    }
 	
 
 
