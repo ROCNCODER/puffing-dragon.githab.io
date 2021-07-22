@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 <html lang="ru">
@@ -38,7 +39,7 @@
 
         <div>
             <img src="../img\HQD-cuvie-plus .jpg" alt="" class="vid">
-           <a href="hqd.html"> <div  class="totvar-element">HQD Cuvie Plus</div></a>
+           <div  class="totvar-element"> <a href="hqd.html" id="klick">HQD Cuvie Plus</a></div>
           
            </div>
 
@@ -93,6 +94,42 @@
     }
   ]
 });
+</script>
+	
+	<script>
+	
+	window.onload = function () {
+
+    //получаем идентификатор элемента
+    var a = document.getElementById('klick');
+    
+    //вешаем на него событие
+    a.onclick = function() {
+        //производим какие-то действия
+gtag('event', 'select_content', {
+  "content_type": "product",
+  "items": [
+    {
+          "id": "S111",
+      "name": "HQD Cuvie Plus",
+      "brand": "HQD",
+      "category": "Electronic Vaporizer",
+      "variant": "Black",
+      "list_position": 1,
+      "quantity": 3,
+      "price": 383
+    }
+  ]
+});
+	    
+	
+        //предотвращаем переход по ссылке href
+
+	  
+	
+    }
+	
+}
 </script>
 </body>
 </html>
