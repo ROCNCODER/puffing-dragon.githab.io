@@ -81,7 +81,7 @@
 	
 <script>
 //Просмотр страницы товара 
-	 gtag('event', 'view_item', {
+gtag('event', 'view_item', {
   "items": [
 	  
     {
@@ -110,7 +110,7 @@ window.onload = function () {
     //вешаем на него событие
     a.onclick = function() {
      //производим какие-то действия
-	    gtag('event', 'add_to_cart', {
+gtag('event', 'add_to_cart', {
   "items": [
     {
        "id": "S111",
@@ -125,20 +125,9 @@ window.onload = function () {
     
   ],
 });
-	
-        //предотвращаем переход по ссылке href
-
-	  
-	
-    }
-	
+//предотвращаем переход по ссылке href
+}
 }
 </script>
-	
-	
-	
-	
-
-
 </body>
 </html>
