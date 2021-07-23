@@ -63,7 +63,7 @@
 
 	
 <script>
-	
+<!--Отправка информации о товарах отправленых в корзину 	
 gtag('event', 'begin_checkout', {
   "items": [
     {
@@ -90,40 +90,8 @@ gtag('event', 'begin_checkout', {
   "coupon": ""
 });
 
-	</script>
-	<script>
-		function showMessage(){
-gtag('event', 'checkout_progress', {
-  "items": [
-    {
-      "id": "P12345",
-      "name": "Android Warhol T-Shirt",
-      "brand": "Google",
-      "category": "Apparel/T-Shirts",
-      "variant": "Black",
-      "list_position": 1,
-      "quantity": 2,
-      "price": '2.0'
-    }
-  ],
-  "coupon": "SUMMER_DISCOUNT"
+</script>
 
-});
-</script>
-<script>
-function createFunctionWithTimeout(callback, opt_timeout) {
-  var called = false;
-  function fn() {
-    if (!called) {
-      called = true;
-      callback();
-    }
-  }
-  setTimeout(fn, opt_timeout || 1000);
-  return fn;
-}
-		
-</script>
 	
 </body>
 </html>
