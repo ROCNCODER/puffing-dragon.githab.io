@@ -79,6 +79,7 @@
 	</div>
 </div>
 <script>
+//Просмотр товарав в каталоге 
     gtag('event', 'view_item_list', {
   "items": [
     {
@@ -116,14 +117,14 @@
 </script>
 	
 <script>
+//Функция клика по товару(Динапически отправляется при клике)
 window.onload = function () {
 
-    //получаем идентификатор элемента
+//получаем идентификатор элемента
     var a = document.getElementById('klick');
-    
-    //вешаем на него событие
+//вешаем на него событие
     a.onclick = function() {
-        //производим какие-то действия
+//производим какие-то действия
 gtag('event', 'select_content', {
   "content_type": "product",
   "items": [
@@ -144,6 +145,7 @@ gtag('event', 'select_content', {
 }
 </script>
 <script>
+<!-- Функция получения id, но вынесеная перед отправкой в GA (После обратимся, к результату функции), через event(С ближайшим хитом )-->
 function id()
 {
     var match = document.cookie.match('(?:^|;)\\s*_ga=([^;]*)');
@@ -159,7 +161,7 @@ function id()
 		}
 		}
 			};
-		
+<!--  Отправка clientId через event(С ближайшим хитом )-->
 gtag('event', 'action_value', {'clientId': id());
 		</script>
 </body>
