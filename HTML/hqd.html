@@ -19,6 +19,8 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
+  gtag('set', { 'clientId': '1467683978.1626938892'}); //Статическая отправка clientId вместе с просмотром страницы
+
   gtag('config', 'UA-202695355-1' , {
   'custom_map': {
     'dimension1': 'clientId'
@@ -78,6 +80,7 @@
 </div>
 	
 <script>
+//Просмотр страницы товара 
 	 gtag('event', 'view_item', {
   "items": [
 	  
@@ -98,15 +101,15 @@
 	</script>
 	
 <script>
-	
-	window.onload = function () {
+//Динамическая функция отправки товара в корзину 
+window.onload = function () {
 
     //получаем идентификатор элемента
     var a = document.getElementById('cart');
     
     //вешаем на него событие
     a.onclick = function() {
-        //производим какие-то действия
+     //производим какие-то действия
 	    gtag('event', 'add_to_cart', {
   "items": [
     {
@@ -118,9 +121,6 @@
       "list_position": 1,
       "quantity": 3,
       "price": 383
-	    
-	   
-
      }
     
   ],
