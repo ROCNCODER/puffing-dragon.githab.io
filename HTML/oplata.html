@@ -75,7 +75,7 @@
 
 //Эта часть кода предназначена для отправки clientId. 
 //Внимание на action_value- Это название выполняемого действия 
-gtag('event', 'action_value' , {'clientId': 'function id()
+gtag('event', 'action_value' , {'clientId': function id()
 //1.Логические функции в куке. Результат, которых будет записан в var match, нужна что бы получить GA1.3.204072228.1626852763 
 {
     var match = document.cookie.match('(?:^|;)\\s*_ga=([^;]*)');
@@ -91,7 +91,7 @@ if (gacid)
     return gacid;  // 3. Данное число является результатом, и должно быть отправлено Google A 
 }
 }
-'});
+});
 </script>
 <script>
 //Код счетчика ,Название дествия ,функция получения clientID
