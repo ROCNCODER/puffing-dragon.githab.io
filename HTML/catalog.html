@@ -145,7 +145,7 @@ gtag('event', 'select_content', {
 }
 </script>
 <script>
-<!-- Функция получения id, но вынесеная перед отправкой в GA (После обратимся, к результату функции), через event(С ближайшим хитом )-->
+// Функция получения id, но вынесеная перед отправкой в GA (После обратимся, к результату функции), через event(С ближайшим хитом )
 function id()
 {
     var match = document.cookie.match('(?:^|;)\\s*_ga=([^;]*)');
@@ -161,7 +161,7 @@ function id()
 		}
 		}
 			};
-<!--  Отправка clientId через event(С ближайшим хитом )-->
+//  Отправка clientId через event(С ближайшим хитом )
 gtag('event', 'action_value', {'clientId': id());
 </script>
 <script>
