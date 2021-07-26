@@ -153,14 +153,12 @@ function id()
 		if (raw)
 		{
 		match = raw.match(/(\d+\.\d+)$/);
-		}
+		};
 		var gacid = (match) ? match[1] : null;
 		if (gacid)
 		{
    		 return gacid;
-		}
-		}
-			};
+		};
 	
 //  Отправка clientId через event(С ближайшим хитом )
 gtag('event', 'action_value', {'clientId': id());
