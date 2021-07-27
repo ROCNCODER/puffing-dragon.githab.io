@@ -62,8 +62,8 @@
 
         <div>
             <img src="../img\HQD-cuvie-plus .jpg" alt="" class="vid">
-           <div  class="totvar-element"> <a href="hqd.html" id="klick">HQD Cuvie Plus</a></div>
-          
+          <!-- <div  class="totvar-element"> <a href="hqd.html"  <id="klick">HQD Cuvie Plus</a></div>-->
+           <div  class="totvar-element"> <a href="hqd.html"    onclick="clickItem();return !ga.loaded;" >HQD Cuvie Plus</a></div>
            </div>
 
            <div>
@@ -124,10 +124,32 @@
 </script>
 	
 <script>
+
+function clickItem() {
+	setTimeout (function() { document.location = "hqd.html" }, 3000); 
+	gtag('event', 'select_content', {
+	  "content_type": "product",
+	  "items": [
+		{
+		  "id": "S111",
+		  "name": "HQD Cuvie Plus",
+		  "brand": "HQD",
+		  "category": "Electronic Vaporizer",
+		  "variant": "Black",
+		  "list_position": 1,
+		  "quantity": 3,
+		  "price": 383
+		}
+	  ]
+	  'event_callback': function() {
+		  document.location = "hqd.html";
+		}
+	});
+}
 	
 //Функция клика по товару(Динапически отправляется при клике)
 	
-window.onload = function () {
+/*window.onload = function () {
 	
 //return !ga.loaded 
 
@@ -163,6 +185,28 @@ gtag('event', 'select_content', {
 
 	    
  }
+}*/
+	
+function clickItem() {
+	setTimeout (function() { document.location = "hqd.html" }, 3000); 
+	gtag('event', 'select_content', {
+	  "content_type": "product",
+	  "items": [
+		{
+		  "id": "S111",
+		  "name": "HQD Cuvie Plus",
+		  "brand": "HQD",
+		  "category": "Electronic Vaporizer",
+		  "variant": "Black",
+		  "list_position": 1,
+		  "quantity": 3,
+		  "price": 383
+		}
+	  ]
+	  'event_callback': function() {
+		  document.location = "hqd.html";
+		}
+	});
 }
 
 </script>
