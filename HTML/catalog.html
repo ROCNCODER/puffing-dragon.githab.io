@@ -118,11 +118,15 @@
 	
 <script>
 //Функция клика по товару(Динапически отправляется при клике)
+	
 window.onload = function () {
 
 //получаем идентификатор элемента
+	
     var a = document.getElementById('klick');
+	
 //вешаем на него событие
+	
     a.onclick = function() {
 //производим какие-то действия
 gtag('event', 'select_content', {
@@ -140,12 +144,19 @@ gtag('event', 'select_content', {
     }
   ]
 });
-//предотвращаем переход по ссылке href
+	    
+//предотвращаем переход по ссылке href - return false;
+//return !ga.loaded
+	    
  }
 }
+
 </script>
+	
 <script>
+	
 // Функция получения id, но вынесеная перед отправкой в GA (После обратимся, к результату функции), через event(С ближайшим хитом )
+	
 function id()
 {
     var match = document.cookie.match('(?:^|;)\\s*_ga=([^;]*)');
@@ -162,15 +173,20 @@ function id()
 		};
 	
 //  Отправка clientId через event(С ближайшим хитом )
+	
 gtag('event', 'action_value', {'clientId': id()});
+	
 </script>
+	
 <script>
+	
 //Код счетчика ,Название дествия ,функция получения clientID
 	ym(83233945, 'getClientID', function(clientID) {
  ym(83233945, 'userParams', { //userParams Отвечает за передачу параметра пользователя
     ymcid: clientID
 });
 });
+	
 </script>
 </body>
 </html>
