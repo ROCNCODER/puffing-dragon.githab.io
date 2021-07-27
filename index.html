@@ -22,16 +22,21 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-	
- gtag('set', { 'clientId': '1467683978.1626938892'}); //Статическая отправка clientId вместе с просмотром страницы	
+
+//Статическая отправка clientId вместе с просмотром страницы	
+ gtag('set', { 'clientId': '1467683978.1626938892'}); 
+ gtag('set', { 'BirthYear': '11.06.2002'});
 	
 // Внимание на часть, кода с параметром custom_map, подключили карту кастомных параметров
+	
   gtag('config', 'UA-202695355-1' , {
   'custom_map': {
-    'dimension1': 'clientId'
  //СчесчикИндекс:Название параметра
+	'dimension1': 'clientId',
+	'dimension2':'BirthYear'
   }
   });
+	
 </script>
 <!-- Подключаем яндекс метрику -->
 <!-- Yandex.Metrika counter -->
@@ -79,6 +84,7 @@
 //Эта часть кода предназначена для отправки clientId. 
 //Внимание на action_value- Это название выполняемого действия 
 // Функция получения id, но вынесеная перед отправкой в GA (После обратимся, к результату функции), через event(С ближайшим хитом )
+	
 function id()
 {
     var match = document.cookie.match('(?:^|;)\\s*_ga=([^;]*)');
@@ -95,8 +101,13 @@ function id()
 		};
 	
 //  Отправка clientId через event(С ближайшим хитом )
-gtag('event', 'action_value', {'clientId': id()});
+gtag('event', 'getClientID', {'clientId': id()});
+	
+//  Отправка BirthYear через event(С ближайшим хитом )
+gtag('event', 'getBirthYear', {'BirthYear': "11.06.2002"});
+	
 </script>
+
 	
 <script>
 //Код счетчика ,Название дествия ,функция получения clientID
