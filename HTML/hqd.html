@@ -13,13 +13,16 @@
 	</head>
 <body>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
+	
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202695355-1"></script>
+	
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('set', { 'clientId': '1467683978.1626938892'}); //Статическая отправка clientId вместе с просмотром страницы
+//Статическая отправка clientId вместе с просмотром страницы
+  gtag('set', { 'clientId': '1467683978.1626938892'}); 
 
   gtag('config', 'UA-202695355-1' , {
   'custom_map': {
@@ -27,7 +30,9 @@
   }
   });
 </script>
+	
 <!-- Yandex.Metrika counter -->
+	
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -41,6 +46,7 @@
         trackHash:true,
         ecommerce:"dataLayer"
    });
+	
 </script>
 
 <div class="content">
@@ -80,7 +86,9 @@
 </div>
 	
 <script>
+	
 //Просмотр страницы товара 
+	
 gtag('event', 'view_item', {
   "items": [
 	  
@@ -101,15 +109,21 @@ gtag('event', 'view_item', {
 	</script>
 	
 <script>
+	
 //Динамическая функция отправки товара в корзину 
+	
 window.onload = function () {
 
     //получаем идентификатор элемента
+	
     var a = document.getElementById('cart');
     
     //вешаем на него событие
+	
     a.onclick = function() {
+	    
      //производим какие-то действия
+	    
 gtag('event', 'add_to_cart', {
   "items": [
     {
@@ -125,12 +139,17 @@ gtag('event', 'add_to_cart', {
     
   ],
 });
+	    
 //предотвращаем переход по ссылке href
+	    
 }
 }
 </script>
+	
 <script>
+	
 // Функция получения id, но вынесеная перед отправкой в GA (После обратимся, к результату функции), через event(С ближайшим хитом )
+	
 function id()
 {
     var match = document.cookie.match('(?:^|;)\\s*_ga=([^;]*)');
@@ -146,15 +165,20 @@ function id()
 		}
 			};
 // Отправка clientId через event(С ближайшим хитом )
+	
 gtag('event', 'action_value', {'clientId': id()});
+	
 </script>
 <script>
+	
 //Код счетчика ,Название дествия ,функция получения clientID
-	ym(83233945, 'getClientID', function(clientID) {
+ym(83233945, 'getClientID', function(clientID) {
  ym(83233945, 'userParams', { //userParams Отвечает за передачу параметра пользователя
     ymcid: clientID
 });
 });
+	
 </script>
+	
 </body>
 </html>
